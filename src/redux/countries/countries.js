@@ -1,6 +1,8 @@
 import { getCovidData, todayDate } from '../../components/api';
 
 const GET_DATA = 'countries/GET_DATA';
+const FILTER_DATA = 'countries/FILTER_DATA';
+const RESTORE_DATA = 'countries/RESTORE_DATA';
 
 const handleData = (data) => {
   const date = todayDate;
@@ -14,6 +16,20 @@ const handleData = (data) => {
   return newData;
 };
 
+const filterCountries = (name) => (dispatch) => {
+  if (name.length) {
+    dispatch({
+      type: FILTER_DATA,
+      playload: name,
+    });
+  } else {
+    dispatch({
+      type: RESTORE_DATA,
+      playload: null,
+    });
+  }
+};
+
 const loadCountriesData = () => async (dispatch) => {
   const covidData = await getCovidData();
   dispatch({
@@ -22,13 +38,29 @@ const loadCountriesData = () => async (dispatch) => {
   });
 };
 
-const countriesReducer = (state = [], action) => {
+const countriesReducer = (state = { countries: [], filter: [] }, action) => {
   switch (action.type) {
     case GET_DATA:
-      return action.playload;
+      return {
+        ...state,
+        countries: action.playload,
+        filter: action.playload,
+      };
+    case FILTER_DATA:
+      return {
+        ...state,
+        filter: state.countries.filter((country) => country.name.toLowerCase().includes(
+          action.playload.toLowerCase(),
+        )),
+      };
+    case RESTORE_DATA:
+      return {
+        ...state,
+        filter: state.countries,
+      };
     default:
       return state;
   }
 };
 
-export { countriesReducer, loadCountriesData };
+export { countriesReducer, loadCountriesData, filterCountries };

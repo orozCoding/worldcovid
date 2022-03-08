@@ -5,12 +5,13 @@ import filterName from '../filterName';
 
 const AllCountries = (props) => {
   const { countriesData } = props;
+  const { filter } = countriesData;
   const navigate = useNavigate();
 
   return (
     <div className="countriesContainer d-flex">
       {
-        countriesData.map((country) => (
+        filter.map((country) => (
           <div
             className="countryBox d-flex col ck"
             key={country.id}
@@ -52,7 +53,9 @@ const AllCountries = (props) => {
 };
 
 AllCountries.propTypes = {
-  countriesData: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  countriesData: PropTypes.shape({
+    filter: PropTypes.arrayOf(PropTypes.shape({})),
+  }).isRequired,
 };
 
 export default AllCountries;
