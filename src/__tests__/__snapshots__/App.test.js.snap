@@ -26,7 +26,7 @@ exports[`App renders 1`] = `
           Worldwide Stats:
         </div>
         <div
-          className="d-flex"
+          className="d-flex worldData"
         >
           <p>
             Date:
@@ -36,7 +36,7 @@ exports[`App renders 1`] = `
           </p>
         </div>
         <div
-          className="d-flex"
+          className="d-flex worldData"
         >
           <p>
             Total cases:
@@ -46,7 +46,7 @@ exports[`App renders 1`] = `
           </p>
         </div>
         <div
-          className="d-flex"
+          className="d-flex worldData"
         >
           <p>
             Total deaths:

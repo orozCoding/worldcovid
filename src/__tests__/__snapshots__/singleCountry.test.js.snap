@@ -39,7 +39,7 @@ exports[`Single Country renders 1`] = `
           Total Cases:
         </p>
         <p>
-          272250
+          272,250
         </p>
          
       </div>
@@ -52,7 +52,7 @@ exports[`Single Country renders 1`] = `
           Total Deaths:
         </p>
         <p>
-          3483
+          3,483
         </p>
          
       </div>

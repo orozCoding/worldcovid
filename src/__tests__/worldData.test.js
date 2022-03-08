@@ -44,6 +44,6 @@ describe('World Data', () => {
   it('displays stats', () => {
     mockData = worldInfo;
     render(<WorldData worldData={worldData} />);
-    expect(screen.getByText('447338425')).toBeDefined();
+    expect(screen.getByText('447,338,425')).toBeDefined();
   });
 });

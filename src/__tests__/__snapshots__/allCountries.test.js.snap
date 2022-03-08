@@ -29,7 +29,7 @@ exports[`All Countries renders 1`] = `
       <div
         className="countryTotal"
       >
-        175000
+        175,000
       </div>
     </div>
   </div>
@@ -58,7 +58,7 @@ exports[`All Countries renders 1`] = `
       <div
         className="countryTotal"
       >
-        272250
+        272,250
       </div>
     </div>
   </div>
@@ -87,7 +87,7 @@ exports[`All Countries renders 1`] = `
       <div
         className="countryTotal"
       >
-        265297
+        265,297
       </div>
     </div>
   </div>

@@ -22,7 +22,7 @@ exports[`World Data renders 1`] = `
       Worldwide Stats:
     </div>
     <div
-      className="d-flex"
+      className="d-flex worldData"
     >
       <p>
         Date:
@@ -32,23 +32,23 @@ exports[`World Data renders 1`] = `
       </p>
     </div>
     <div
-      className="d-flex"
+      className="d-flex worldData"
     >
       <p>
         Total cases:
       </p>
       <p>
-        447338425
+        447,338,425
       </p>
     </div>
     <div
-      className="d-flex"
+      className="d-flex worldData"
     >
       <p>
         Total deaths:
       </p>
       <p>
-        6006031
+        6,006,031
       </p>
     </div>
   </div>
