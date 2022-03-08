@@ -16,12 +16,15 @@ const handleData = (data) => {
 };
 
 const filterCountries = (name, countries) => (dispatch) => {
+  const newName = name.toLowerCase();
   const newCountries = [...countries];
-  const filteredCountries = newCountries.filter((country) => country.name === name);
-  dispatch({
-    type: FILTER_DATA,
-    playload: handleData(filteredCountries),
-  });
+  const filteredCountries = newCountries.filter((country) => country.id === newName);
+  if (filteredCountries.length) {
+    dispatch({
+      type: FILTER_DATA,
+      playload: filteredCountries,
+    });
+  }
 };
 
 const loadCountriesData = () => async (dispatch) => {
