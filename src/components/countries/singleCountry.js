@@ -55,7 +55,10 @@ const SingleCountry = (props) => {
             <p>API by Narrativa</p>
             <p>
               Made by
-              <a href="https://github.com/orozCoding" className="credits">orozCoding</a>
+              {' '}
+              <span>
+                <a href="https://github.com/orozCoding" className="credits">orozCoding</a>
+              </span>
             </p>
           </div>
         </div>
