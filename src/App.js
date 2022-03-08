@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import WorldHome from './components/world/worldHome';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import {
+  BrowserRouter as Router, Routes, Route, Navigate,
+} from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import WorldHome from './components/world/worldHome';
 import { loadCountriesData } from './redux/countries/countries';
 import { loadWorldData } from './redux/world/world';
 import SingleCountry from './components/countries/singleCountry';
@@ -25,18 +27,21 @@ const App = () => {
     }
   }, []);
 
-
   return (
     <Router>
       <main className="main d-flex col">
         <Routes>
           <Route path="/" element={<WorldHome worldData={worldData} countriesData={countriesData} />} />
           {
-            countriesData.map((country) => {
-              return <Route key={country.id} path={
+            countriesData.map((country) => (
+              <Route
+                key={country.id}
+                path={
                 `/${filterName(country.name)}`
-              } element={<SingleCountry key={country.id} country={country} />} />
-            })
+              }
+                element={<SingleCountry key={country.id} country={country} />}
+              />
+            ))
           }
           <Route
             path="*"
@@ -46,6 +51,6 @@ const App = () => {
       </main>
     </Router>
   );
-}
+};
 
 export default App;

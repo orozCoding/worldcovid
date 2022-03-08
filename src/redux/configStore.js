@@ -6,7 +6,7 @@ import { worldReducer } from './world/world';
 
 const reducer = combineReducers({
   countries: countriesReducer,
-  world: worldReducer
+  world: worldReducer,
 });
 
 const store = createStore(

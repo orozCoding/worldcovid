@@ -1,19 +1,18 @@
-import { getCovidData } from "../../components/api";
+import { getCovidData } from '../../components/api';
 
 const GET_DATA = 'world/GET_DATA';
 
 const handleData = (data) => {
-  let arr = data['total'];
+  const arr = data.total;
   return arr;
-}
+};
 
 const loadWorldData = () => async (dispatch) => {
   const covidData = await getCovidData();
-  console.log('aca toy');
   dispatch({
     type: GET_DATA,
-    playload: handleData(covidData)
-  })
+    playload: handleData(covidData),
+  });
 };
 
 const worldReducer = (state = [], action) => {
@@ -23,6 +22,6 @@ const worldReducer = (state = [], action) => {
     default:
       return state;
   }
-}
+};
 
 export { worldReducer, loadWorldData };
