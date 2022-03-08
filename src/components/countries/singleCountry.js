@@ -46,6 +46,18 @@ const SingleCountry = (props) => {
             {' '}
 
           </div>
+          <div
+            className="d-flex col insideCredits"
+            key="credit box"
+            aria-hidden="true"
+          >
+            <p>Source: Johns Hopkins University.</p>
+            <p>API by Narrativa</p>
+            <p>
+              Made by
+              <a href="https://github.com/orozCoding" className="credits">orozCoding</a>
+            </p>
+          </div>
         </div>
         <div className="backButton"><i className="bi bi-arrow-left-circle ck" onClick={() => navigate('/')} aria-hidden="true" /></div>
       </div>

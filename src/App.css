@@ -198,3 +198,14 @@ body {
   padding: 30px;
   font-size: 35px;
 }
+
+.credits,
+.credits:visited,
+.credits:active,
+.credits:hover {
+  color: rgb(235, 177, 69);
+}
+
+.insideCredits p {
+  font-size: 15px;
+}

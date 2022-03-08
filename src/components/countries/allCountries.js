@@ -39,6 +39,10 @@ const AllCountries = (props) => {
       >
         <p>Source: Johns Hopkins University.</p>
         <p>API by Narrativa</p>
+        <p>
+          Made by
+          <a href="https://github.com/orozCoding" className="credits">orozCoding</a>
+        </p>
       </div>
     </div>
   );
