@@ -1,12 +1,12 @@
 import { React } from 'react';
+import PropTypes from 'prop-types';
 import AllCountries from '../countries/allCountries';
 import WorldData from './worldData';
-import PropTypes from 'prop-types';
 
 const WorldHome = (props) => {
   const { countriesData, worldData } = props;
 
-  console.log(countriesData, worldData);
+  console.log(worldData);
 
   return (
     <div>
@@ -20,6 +20,9 @@ const WorldHome = (props) => {
   );
 };
 
-
-
 export default WorldHome;
+
+WorldHome.propTypes = {
+  countriesData: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  worldData: PropTypes.shape({}).isRequired,
+};

@@ -15,7 +15,7 @@ const loadWorldData = () => async (dispatch) => {
   });
 };
 
-const worldReducer = (state = [], action) => {
+const worldReducer = (state = {}, action) => {
   switch (action.type) {
     case GET_DATA:
       return action.playload;
