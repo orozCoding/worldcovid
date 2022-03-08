@@ -9,6 +9,7 @@ const handleData = (data) => {
 
 const loadWorldData = () => async (dispatch) => {
   const covidData = await getCovidData();
+  console.log('aca toy');
   dispatch({
     type: GET_DATA,
     playload: handleData(covidData)

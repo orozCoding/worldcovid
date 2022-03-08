@@ -1,5 +1,8 @@
 const covidAPI = 'https://api.covid19tracking.narrativa.com/api/';
-const todayDate = new Date().toISOString().slice(0,10);
+let todayDate = new Date(new Date().setDate(new Date().getDate()-1));
+todayDate = todayDate.toISOString().slice(0, 10);
+
+console.log(todayDate);
 
 const api = `${covidAPI}${todayDate}`
 
