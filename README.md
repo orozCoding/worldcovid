@@ -9,11 +9,11 @@ This project was created in order to practice React and Redux.
 
 ### Preview
 
-Coming soon.
+![](./public/preview.gif)
 
 ## Live Version
 
-Coming soon.
+[Visit live version](https://covid19worldwidestats.netlify.app)
 
 ## Built With
 - HTML, CSS, JavaScript
