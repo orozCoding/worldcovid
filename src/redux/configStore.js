@@ -11,7 +11,7 @@ const reducer = combineReducers({
 
 const store = createStore(
   reducer,
-  applyMiddleware(thunk),
+  applyMiddleware(thunk, logger),
 );
 
 export default store;

@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  render, screen, fireEvent, wait,
+  render, screen, fireEvent,
 } from '@testing-library/react';
 import renderer, { act } from 'react-test-renderer';
 import { Provider } from 'react-redux';
