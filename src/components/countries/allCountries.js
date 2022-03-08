@@ -26,7 +26,7 @@ const AllCountries = (props) => {
           </div>
           <div className="countryInfo d-flex col">
             <div className="lato bold countryName">{country.name}</div>
-            <div className="countryTotal">{country.today_confirmed}</div>
+            <div className="countryTotal">{Intl.NumberFormat().format(country.today_confirmed)}</div>
           </div>
         </div>
       ))

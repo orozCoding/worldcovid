@@ -24,25 +24,25 @@ const SingleCountry = (props) => {
         <div className="selfStats">
           <div className="d-flex">
             <p className="bold">Total Cases:</p>
-            <p>{confirmed}</p>
+            <p>{Intl.NumberFormat().format(confirmed)}</p>
             {' '}
 
           </div>
           <div className="d-flex">
             <p className="bold">Total Deaths:</p>
-            <p>{deaths}</p>
+            <p>{Intl.NumberFormat().format(deaths)}</p>
             {' '}
 
           </div>
           <div className="d-flex">
             <p className="bold">Cases today:</p>
-            <p>{todayConfirmed}</p>
+            <p>{Intl.NumberFormat().format(todayConfirmed)}</p>
             {' '}
 
           </div>
           <div className="d-flex">
             <p className="bold">Deaths today:</p>
-            <p>{todayDeaths}</p>
+            <p>{Intl.NumberFormat().format(todayDeaths)}</p>
             {' '}
 
           </div>

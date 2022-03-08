@@ -13,17 +13,17 @@ const WorldData = (props) => {
       </div>
       <div className="home-right d-flex col">
         <div className="subTitle lato bold">Worldwide Stats:</div>
-        <div className="d-flex">
+        <div className="d-flex worldData">
           <p>Date:</p>
           <p>{todayDate}</p>
         </div>
-        <div className="d-flex">
+        <div className="d-flex worldData">
           <p>Total cases:</p>
-          <p>{confirmed}</p>
+          <p>{Intl.NumberFormat().format(confirmed)}</p>
         </div>
-        <div className="d-flex">
+        <div className="d-flex worldData">
           <p>Total deaths:</p>
-          <p>{deaths}</p>
+          <p>{Intl.NumberFormat().format(deaths)}</p>
         </div>
       </div>
 
