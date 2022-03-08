@@ -6,8 +6,6 @@ import WorldData from './worldData';
 const WorldHome = (props) => {
   const { countriesData, worldData } = props;
 
-  console.log(worldData);
-
   return (
     <div>
       <WorldData worldData={worldData} />

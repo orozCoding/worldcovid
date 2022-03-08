@@ -1,13 +1,15 @@
 const filterName = (str) => {
-  str = str.split('');
-  str = str.filter((l) => l.match(/[a-zA-Z\s]/));
-  str.map((l, i) => {
+  let newStr = str.split('');
+  newStr = newStr.filter((l) => l.match(/[a-zA-Z\s]/));
+  newStr.map((l, i) => {
     if (l === ' ') {
-      return str[i] = '-';
+      newStr[i] = '-';
+      return newStr[i];
     }
     return null;
   });
-  return str = str.join('').toLowerCase();
+  newStr = newStr.join('').toLowerCase();
+  return newStr;
 };
 
 export default filterName;
