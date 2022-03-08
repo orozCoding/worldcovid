@@ -33,7 +33,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<WorldHome worldData={worldData} countriesData={countriesData} />} />
           {
-            countriesData.map((country) => (
+            countriesData.countries.map((country) => (
               <Route
                 key={country.id}
                 path={

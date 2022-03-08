@@ -2,6 +2,7 @@ import { getCovidData, todayDate } from '../../components/api';
 
 const GET_DATA = 'countries/GET_DATA';
 const FILTER_DATA = 'countries/FILTER_DATA';
+const RESTORE_DATA = 'countries/RESTORE_DATA';
 
 const handleData = (data) => {
   const date = todayDate;
@@ -15,20 +16,16 @@ const handleData = (data) => {
   return newData;
 };
 
-const filterCountries = (name) => async (dispatch) => {
-  const covidData = await getCovidData();
-  const countries = handleData(covidData);
-  const newName = name.toLowerCase();
-  const filteredCountries = countries.filter((country) => country.id === newName);
-  if (filteredCountries.length) {
+const filterCountries = (name) => (dispatch) => {
+  if (name.length) {
     dispatch({
       type: FILTER_DATA,
-      playload: filteredCountries,
+      playload: name,
     });
   } else {
     dispatch({
-      type: FILTER_DATA,
-      playload: countries,
+      type: RESTORE_DATA,
+      playload: null,
     });
   }
 };
@@ -41,12 +38,26 @@ const loadCountriesData = () => async (dispatch) => {
   });
 };
 
-const countriesReducer = (state = [], action) => {
+const countriesReducer = (state = { countries: [], filter: [] }, action) => {
   switch (action.type) {
     case GET_DATA:
-      return action.playload;
+      return {
+        ...state,
+        countries: action.playload,
+        filter: action.playload,
+      };
     case FILTER_DATA:
-      return action.playload;
+      return {
+        ...state,
+        filter: state.countries.filter((country) => country.id.includes(
+          action.playload.toLowerCase(),
+        )),
+      };
+    case RESTORE_DATA:
+      return {
+        ...state,
+        filter: state.countries,
+      };
     default:
       return state;
   }

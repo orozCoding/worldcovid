@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { filterCountries } from '../../redux/countries/countries';
 
 const SingleCountry = (props) => {
   const { country } = props;
@@ -10,6 +12,12 @@ const SingleCountry = (props) => {
     today_new_deaths: todayDeaths,
   } = country;
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleFilter = () => {
+    const name = '';
+    dispatch(filterCountries(name));
+  };
 
   return (
     <div className="selfCountries d-flex col">
@@ -62,7 +70,17 @@ const SingleCountry = (props) => {
             </p>
           </div>
         </div>
-        <div className="backButton"><i className="bi bi-arrow-left-circle ck" onClick={() => navigate('/')} aria-hidden="true" /></div>
+        <div className="backButton">
+          <i
+            className="bi bi-arrow-left-circle ck"
+            onClick={() => {
+              handleFilter();
+              navigate('/');
+            }}
+            aria-hidden="true"
+          />
+
+        </div>
       </div>
     </div>
   );

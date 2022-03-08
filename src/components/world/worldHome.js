@@ -12,7 +12,7 @@ const WorldHome = (props) => {
   const handleFilter = () => {
     const input = document.getElementById('countryFilter');
     const name = input.value;
-    dispatch(filterCountries(name, countriesData));
+    dispatch(filterCountries(name));
   };
 
   return (
@@ -24,7 +24,7 @@ const WorldHome = (props) => {
         <input
           id="countryFilter"
           type="text"
-          onKeyUp={() => handleFilter()}
+          onChange={() => handleFilter()}
           placeholder="Search a country"
         />
       </div>
