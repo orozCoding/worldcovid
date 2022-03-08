@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 
 const SingleCountry = (props) => {
   const { country } = props;
-  console.log(country);
   const {
     name, date, today_confirmed: confirmed,
     today_deaths: deaths, today_new_confirmed: todayConfirmed,

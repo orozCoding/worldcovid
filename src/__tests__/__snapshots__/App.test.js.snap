@@ -25,17 +25,35 @@ exports[`App renders 1`] = `
         >
           Worldwide Stats:
         </div>
-        <div>
-          Date:
-          2022-03-07
+        <div
+          className="d-flex"
+        >
+          <p>
+            Date:
+          </p>
+          <p>
+            2022-03-07
+          </p>
         </div>
-        <div>
-          Total cases:
-          0
+        <div
+          className="d-flex"
+        >
+          <p>
+            Total cases:
+          </p>
+          <p>
+            0
+          </p>
         </div>
-        <div>
-          Total deaths:
-          0
+        <div
+          className="d-flex"
+        >
+          <p>
+            Total deaths:
+          </p>
+          <p>
+            0
+          </p>
         </div>
       </div>
     </div>
