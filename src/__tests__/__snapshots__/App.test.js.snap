@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders 1`] = `
+<main
+  className="main d-flex col"
+>
+  <div>
+    <div
+      className="homeHeader d-flex"
+    >
+      <div
+        className="home-left d-flex col"
+      >
+        <p
+          className="covid-title mainTitle lato"
+        >
+          COVID19 GLOBAL STATS
+        </p>
+      </div>
+      <div
+        className="home-right d-flex col"
+      >
+        <div
+          className="subTitle lato bold"
+        >
+          Worldwide Stats:
+        </div>
+        <div>
+          Date:
+          2022-03-07
+        </div>
+        <div>
+          Total cases:
+          0
+        </div>
+        <div>
+          Total deaths:
+          0
+        </div>
+      </div>
+    </div>
+    <div
+      className="separator d-flex col"
+    >
+      <p
+        className="lato bold totalTitle"
+      >
+        Total Cases By Country
+      </p>
+      <p>
+        Select one country for more information
+      </p>
+    </div>
+    <div
+      className="countriesContainer d-flex"
+    >
+      <div
+        aria-hidden="true"
+        className="countryBox d-flex col ck"
+        onClick={[Function]}
+      >
+        <p>
+          Source: Johns Hopkins University.
+        </p>
+        <p>
+          API by Narrativa
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+`;

@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`All Countries renders 1`] = `
+<div
+  className="selfCountries d-flex col"
+>
+  <div
+    className="countryContainer d-flex col"
+  >
+    <div
+      className="selfTitle lato bold d-flex"
+    >
+      <p>
+        Albania
+      </p>
+    </div>
+    <div
+      className="selfDate d-flex"
+    >
+      <p
+        className="bold"
+      >
+        Date:
+      </p>
+      <p>
+        2022-03-07
+      </p>
+       
+    </div>
+    <div
+      className="selfStats"
+    >
+      <div
+        className="d-flex"
+      >
+        <p
+          className="bold"
+        >
+          Total Cases:
+        </p>
+        <p>
+          272250
+        </p>
+         
+      </div>
+      <div
+        className="d-flex"
+      >
+        <p
+          className="bold"
+        >
+          Total Deaths:
+        </p>
+        <p>
+          3483
+        </p>
+         
+      </div>
+      <div
+        className="d-flex"
+      >
+        <p
+          className="bold"
+        >
+          Cases today:
+        </p>
+        <p>
+          40
+        </p>
+         
+      </div>
+      <div
+        className="d-flex"
+      >
+        <p
+          className="bold"
+        >
+          Deaths today:
+        </p>
+        <p>
+          1
+        </p>
+         
+      </div>
+    </div>
+    <div
+      className="backButton"
+    >
+      <i
+        aria-hidden="true"
+        className="bi bi-arrow-left-circle ck"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Single Country renders 1`] = `
+<div
+  className="selfCountries d-flex col"
+>
+  <div
+    className="countryContainer d-flex col"
+  >
+    <div
+      className="selfTitle lato bold d-flex"
+    >
+      <p>
+        Albania
+      </p>
+    </div>
+    <div
+      className="selfDate d-flex"
+    >
+      <p
+        className="bold"
+      >
+        Date:
+      </p>
+      <p>
+        2022-03-07
+      </p>
+       
+    </div>
+    <div
+      className="selfStats"
+    >
+      <div
+        className="d-flex"
+      >
+        <p
+          className="bold"
+        >
+          Total Cases:
+        </p>
+        <p>
+          272250
+        </p>
+         
+      </div>
+      <div
+        className="d-flex"
+      >
+        <p
+          className="bold"
+        >
+          Total Deaths:
+        </p>
+        <p>
+          3483
+        </p>
+         
+      </div>
+      <div
+        className="d-flex"
+      >
+        <p
+          className="bold"
+        >
+          Cases today:
+        </p>
+        <p>
+          40
+        </p>
+         
+      </div>
+      <div
+        className="d-flex"
+      >
+        <p
+          className="bold"
+        >
+          Deaths today:
+        </p>
+        <p>
+          1
+        </p>
+         
+      </div>
+    </div>
+    <div
+      className="backButton"
+    >
+      <i
+        aria-hidden="true"
+        className="bi bi-arrow-left-circle ck"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;
