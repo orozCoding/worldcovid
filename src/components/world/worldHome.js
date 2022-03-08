@@ -36,6 +36,6 @@ const WorldHome = (props) => {
 export default WorldHome;
 
 WorldHome.propTypes = {
-  countriesData: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  countriesData: PropTypes.shape({}).isRequired,
   worldData: PropTypes.shape({}).isRequired,
 };

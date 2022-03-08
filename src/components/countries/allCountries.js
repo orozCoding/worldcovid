@@ -53,7 +53,9 @@ const AllCountries = (props) => {
 };
 
 AllCountries.propTypes = {
-  countriesData: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  countriesData: PropTypes.shape({
+    filter: PropTypes.arrayOf(PropTypes.shape({})),
+  }).isRequired,
 };
 
 export default AllCountries;
