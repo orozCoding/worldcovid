@@ -25,7 +25,7 @@ const WorldHome = (props) => {
           id="countryFilter"
           type="text"
           onChange={() => handleFilter()}
-          placeholder="Search a country"
+          placeholder="Search a country..."
         />
       </div>
       <AllCountries countriesData={countriesData} />

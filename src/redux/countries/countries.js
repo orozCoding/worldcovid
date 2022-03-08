@@ -49,7 +49,7 @@ const countriesReducer = (state = { countries: [], filter: [] }, action) => {
     case FILTER_DATA:
       return {
         ...state,
-        filter: state.countries.filter((country) => country.id.includes(
+        filter: state.countries.filter((country) => country.name.toLowerCase().includes(
           action.playload.toLowerCase(),
         )),
       };

@@ -94,6 +94,23 @@ body {
   font-size: 18px;
 }
 
+#countryFilter {
+  margin-top: 10px;
+  padding: 8px;
+  width: 60%;
+  background-color: #4c73bb;
+  color: white;
+  text-align: center;
+  border: 2px #354f80 solid;
+  outline: none;
+}
+
+#countryFilter::placeholder {
+  color: #d2e2ff;
+  font-style: italic;
+  font-size: 15px;
+}
+
 .countriesContainer {
   flex-wrap: wrap;
 }
