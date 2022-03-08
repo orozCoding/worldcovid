@@ -15,14 +15,20 @@ const handleData = (data) => {
   return newData;
 };
 
-const filterCountries = (name, countries) => (dispatch) => {
+const filterCountries = (name) => async (dispatch) => {
+  const covidData = await getCovidData();
+  const countries = handleData(covidData);
   const newName = name.toLowerCase();
-  const newCountries = [...countries];
-  const filteredCountries = newCountries.filter((country) => country.id === newName);
+  const filteredCountries = countries.filter((country) => country.id === newName);
   if (filteredCountries.length) {
     dispatch({
       type: FILTER_DATA,
       playload: filteredCountries,
+    });
+  } else {
+    dispatch({
+      type: FILTER_DATA,
+      playload: countries,
     });
   }
 };
