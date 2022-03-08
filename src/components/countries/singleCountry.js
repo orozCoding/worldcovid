@@ -17,7 +17,7 @@ const SingleCountry = (props) => {
           <div className="d-flex"><p className="bold">Cases today:</p><p>{country.today_new_confirmed}</p> </div>
           <div className="d-flex"><p className="bold">Deaths today:</p><p>{country.today_new_deaths}</p> </div>
         </div>
-        <div className="backButton"><i class="bi bi-arrow-left-circle ck" onClick={() => navigate('/')}></i></div>
+        <div className="backButton"><i className="bi bi-arrow-left-circle ck" onClick={() => navigate('/')}></i></div>
       </div>
     </div>
   );

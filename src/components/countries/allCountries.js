@@ -13,7 +13,7 @@ const AllCountries = (props) => {
           <div className="countryBox d-flex col ck" key={country.id}
             onClick={() => navigate(`/${filterName(country.name)}`)}>
             <div className="arrowIcon d-flex">
-              <i class="bi bi-arrow-right-circle ck"
+              <i className="bi bi-arrow-right-circle ck"
                 onClick={() => navigate(`/${filterName(country.name)}`)}></i>
             </div>
             <div className="countryInfo d-flex col">
