@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import filterName from '../filterName';
 
@@ -14,10 +15,12 @@ const AllCountries = (props) => {
           className="countryBox d-flex col ck"
           key={country.id}
           onClick={() => navigate(`/${filterName(country.name)}`)}
+          aria-hidden="true"
         >
           <div className="arrowIcon d-flex">
             <i
               className="bi bi-arrow-right-circle ck"
+              aria-hidden="true"
               onClick={() => navigate(`/${filterName(country.name)}`)}
             />
           </div>
@@ -32,12 +35,17 @@ const AllCountries = (props) => {
         className="countryBox d-flex col ck"
         key="empty box"
         onClick={() => navigate('/')}
+        aria-hidden="true"
       >
         <p>Source: Johns Hopkins University.</p>
         <p>API by Narrativa</p>
       </div>
     </div>
   );
+};
+
+AllCountries.propTypes = {
+  countriesData: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default AllCountries;
