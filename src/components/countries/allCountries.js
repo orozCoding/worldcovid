@@ -10,27 +10,27 @@ const AllCountries = (props) => {
   return (
     <div className="countriesContainer d-flex">
       {
-      countriesData.map((country) => (
-        <div
-          className="countryBox d-flex col ck"
-          key={country.id}
-          onClick={() => navigate(`/${filterName(country.name)}`)}
-          aria-hidden="true"
-        >
-          <div className="arrowIcon d-flex">
-            <i
-              className="bi bi-arrow-right-circle ck"
-              aria-hidden="true"
-              onClick={() => navigate(`/${filterName(country.name)}`)}
-            />
+        countriesData.map((country) => (
+          <div
+            className="countryBox d-flex col ck"
+            key={country.id}
+            onClick={() => navigate(`/${filterName(country.name)}`)}
+            aria-hidden="true"
+          >
+            <div className="arrowIcon d-flex">
+              <i
+                className="bi bi-arrow-right-circle ck"
+                aria-hidden="true"
+                onClick={() => navigate(`/${filterName(country.name)}`)}
+              />
+            </div>
+            <div className="countryInfo d-flex col">
+              <div className="lato bold countryName">{country.name}</div>
+              <div className="countryTotal">{Intl.NumberFormat().format(country.today_confirmed)}</div>
+            </div>
           </div>
-          <div className="countryInfo d-flex col">
-            <div className="lato bold countryName">{country.name}</div>
-            <div className="countryTotal">{Intl.NumberFormat().format(country.today_confirmed)}</div>
-          </div>
-        </div>
-      ))
-}
+        ))
+      }
       <div
         className="countryBox d-flex col ck"
         key="empty box"
@@ -41,7 +41,10 @@ const AllCountries = (props) => {
         <p>API by Narrativa</p>
         <p>
           Made by
-          <a href="https://github.com/orozCoding" className="credits">orozCoding</a>
+          {' '}
+          <span>
+            <a href="https://github.com/orozCoding" className="credits">orozCoding</a>
+          </span>
         </p>
       </div>
     </div>
