@@ -1,35 +1,51 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-import filterName from "../filterName";
+import filterName from '../filterName';
 
 const AllCountries = (props) => {
   const { countriesData } = props;
   const navigate = useNavigate();
 
   return (
-    <div className="countriesContainer d-flex">{
-      countriesData.map((country) => {
-        return (
-          <div className="countryBox d-flex col ck" key={country.id}
-            onClick={() => navigate(`/${filterName(country.name)}`)}>
-            <div className="arrowIcon d-flex">
-              <i className="bi bi-arrow-right-circle ck"
-                onClick={() => navigate(`/${filterName(country.name)}`)}></i>
-            </div>
-            <div className="countryInfo d-flex col">
-              <div className="lato bold countryName">{country.name}</div>
-              <div className="countryTotal">{country.today_confirmed}</div>
-            </div>
+    <div className="countriesContainer d-flex">
+      {
+      countriesData.map((country) => (
+        <div
+          className="countryBox d-flex col ck"
+          key={country.id}
+          onClick={() => navigate(`/${filterName(country.name)}`)}
+          aria-hidden="true"
+        >
+          <div className="arrowIcon d-flex">
+            <i
+              className="bi bi-arrow-right-circle ck"
+              aria-hidden="true"
+              onClick={() => navigate(`/${filterName(country.name)}`)}
+            />
           </div>
-        )
-      })}
-      <div className="countryBox d-flex col ck" key={`empty box`}
-        onClick={() => navigate(`/`)}>
-          <p>Source: Johns Hopkins University.</p>
-          <p>API by Narrativa</p>
+          <div className="countryInfo d-flex col">
+            <div className="lato bold countryName">{country.name}</div>
+            <div className="countryTotal">{country.today_confirmed}</div>
+          </div>
+        </div>
+      ))
+}
+      <div
+        className="countryBox d-flex col ck"
+        key="empty box"
+        onClick={() => navigate('/')}
+        aria-hidden="true"
+      >
+        <p>Source: Johns Hopkins University.</p>
+        <p>API by Narrativa</p>
       </div>
     </div>
   );
-}
+};
+
+AllCountries.propTypes = {
+  countriesData: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+};
 
 export default AllCountries;
